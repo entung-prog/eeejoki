@@ -1,0 +1,3 @@
+<?php
+namespace Database\Factories; use App\Enums\{AffiliateTier, UserRole}; use Illuminate\Database\Eloquent\Factories\Factory; use Illuminate\Support\Facades\Hash; use Illuminate\Support\Str;
+class UserFactory extends Factory { public function definition(): array { return ['name'=>fake()->name(), 'email'=>fake()->unique()->safeEmail(), 'phone'=>fake()->phoneNumber(), 'password'=>Hash::make('password'), 'role'=>UserRole::Customer, 'affiliate_tier'=>AffiliateTier::Bronze, 'referral_code'=>Str::upper(Str::random(8)), 'wallet_balance'=>0]; } public function role(UserRole $role): static { return $this->state(fn()=>['role'=>$role]); } }

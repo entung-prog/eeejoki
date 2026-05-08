@@ -1,0 +1,1 @@
+<script setup lang="ts">defineProps<{ title: string; description: string }>();</script><template><div class="rounded-3xl border border-dashed border-white/15 p-10 text-center"><h3 class="font-bold text-white">{{ title }}</h3><p class="mt-2 text-sm text-slate-400">{{ description }}</p></div></template>

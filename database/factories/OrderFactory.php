@@ -1,0 +1,3 @@
+<?php
+namespace Database\Factories; use App\Enums\{OrderPriority, OrderStatus}; use App\Models\User; use Illuminate\Database\Eloquent\Factories\Factory; use Illuminate\Support\Str;
+class OrderFactory extends Factory { public function definition(): array { return ['order_code'=>'EEE-'.now()->format('Ymd').'-'.Str::upper(Str::random(6)), 'customer_id'=>User::factory(), 'worker_id'=>null, 'title'=>fake()->sentence(4), 'description'=>fake()->paragraph(), 'deadline'=>now()->addDays(fake()->numberBetween(3,30)), 'priority'=>fake()->randomElement(OrderPriority::cases()), 'status'=>OrderStatus::Pending, 'total_price'=>fake()->numberBetween(100000,2500000), 'worker_fee'=>fake()->numberBetween(50000,1000000), 'revision_count'=>0]; } }

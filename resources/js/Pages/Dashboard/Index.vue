@@ -1,0 +1,3 @@
+<script setup lang="ts">
+import AppLayout from '@/Layouts/AppLayout.vue'; import MetricCard from '@/Components/MetricCard.vue'; defineProps<{ metrics: Record<string, any> }>();
+</script><template><AppLayout><div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4"><MetricCard v-for="(value,key) in metrics" :key="key" :label="String(key).replace(/([A-Z])/g,' $1')" :value="Array.isArray(value) ? value.length : value" /></div><div class="card mt-6"><h2 class="text-lg font-bold">Realtime Operations</h2><p class="mt-2 text-slate-400">Laravel Reverb channels stream task assignments, progress updates, chats, and notification dropdown state.</p></div></AppLayout></template>
