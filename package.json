@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "vite build", "dev": "vite", "typecheck": "vue-tsc --noEmit"},
+  "devDependencies": {"@inertiajs/vue3": "^2.0.0", "@tailwindcss/forms": "^0.5.10", "@tailwindcss/vite": "^4.0.0", "@types/node": "^22.10.0", "@vitejs/plugin-vue": "^5.2.0", "autoprefixer": "^10.4.20", "axios": "^1.7.9", "concurrently": "^9.1.0", "laravel-vite-plugin": "^1.2.0", "tailwindcss": "^4.0.0", "typescript": "^5.7.2", "vite": "^6.0.11", "vue": "^3.5.13", "vue-tsc": "^2.2.0"},
+  "dependencies": {"@headlessui/vue": "^1.7.23", "@heroicons/vue": "^2.2.0", "chart.js": "^4.4.7", "laravel-echo": "^2.0.2", "pusher-js": "^8.4.0"}
+}

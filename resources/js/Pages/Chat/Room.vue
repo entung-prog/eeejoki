@@ -1,0 +1,1 @@
+<script setup lang="ts">import AppLayout from '@/Layouts/AppLayout.vue';</script><template><AppLayout><div class="card"><h1 class="text-2xl font-black">Room</h1><p class="mt-2 text-slate-400">EEEJOKI production module workspace.</p></div></AppLayout></template>
